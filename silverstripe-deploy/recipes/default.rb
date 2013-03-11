@@ -19,18 +19,18 @@ node[:deploy].each do |application, deploy|
 	end
 
 	link "assets" do
-		target_file "#{deploy[:absolute_document_root]}/assets"
+		target_file "#{deploy[:absolute_document_root]}assets"
 		to "/vol/assets/#{application}"
 		action :create
 		not_if do
-    		::File.exists?("#{deploy[:absolute_document_root]}/assets")
+    		::File.exists?("#{deploy[:absolute_document_root]}assets")
   		end
 	end
 
 	#file "#{deploy[:absolute_document_root]}/.htaccess"
 
-	file "#{deploy[:absolute_document_root]}/.htaccess" do
-  		replace("SetEnv ENVIRONMENT local", "SetEnv ENVIRONMENT production") if include? "SetEnv ENVIRONMENT"
-	end
+	#file "#{deploy[:absolute_document_root]}.htaccess" do
+  	#	replace("SetEnv ENVIRONMENT local", "SetEnv ENVIRONMENT production") if include? "SetEnv ENVIRONMENT"
+	#end
 
 end
