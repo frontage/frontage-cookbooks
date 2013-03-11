@@ -27,4 +27,10 @@ node[:deploy].each do |application, deploy|
   		end
 	end
 
+	#file "#{deploy[:absolute_document_root]}/.htaccess"
+
+	file "#{deploy[:absolute_document_root]}/.htaccess" do
+  		replace("SetEnv ENVIRONMENT local", "SetEnv ENVIRONMENT production") if include? "SetEnv ENVIRONMENT"
+	end
+
 end
