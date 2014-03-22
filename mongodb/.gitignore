@@ -1,8 +1,18 @@
-build
-.kitchen/
-.kitchen.local.yml
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
 
-Berksfile.lock
-Gemfile.lock
-
-metadata.json
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
