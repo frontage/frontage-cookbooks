@@ -1,0 +1,3 @@
+[submodule "chef-cookbook-nginx-proxy"]
+	path = chef-cookbook-nginx-proxy
+	url = https://github.com/3ofcoins/chef-cookbook-nginx-proxy.git
